@@ -13,7 +13,7 @@
   -webkit-transform-style: preserve-3d;
 }
 
-#cube figure {
+.face {
   width: 596px;
   height: 596px;
   display: block;
