@@ -43,18 +43,18 @@
 #cube.show-top { -webkit-transform: translateZ(-300px) rotateX(-90deg); }
 #cube.show-bottom { -webkit-transform: translateZ(-300px) rotateX(90deg); }
 
-#slides { display: hidden; }
+#slides { display: none; }
 
-.face {
-  background-color: white;
-}
-
-.slide h1 {
+.face h1 {
   float: left;
   font-family: 'Open Sans', sans-serif;
   font-size: 100px;
   margin: 0;
-  padding: 0;
-  position: relative;
-  left: 20px;
+  padding: 0 30px;
+}
+
+.face {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
