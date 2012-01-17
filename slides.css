@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+
 .container {
   width: 600px;
   height: 600px;
@@ -22,30 +24,12 @@
   border-radius: 20px;
 }
 
-#cube .front {
-  background-color: red;
-  -webkit-transform: rotateY(0deg) translateZ(300px);
-}
-#cube .back {
-  background-color: orange;
-  -webkit-transform: rotateX(180deg) translateZ(300px);
-}
-#cube .right {
-  background-color: yellow;
-  -webkit-transform: rotateY(90deg) translateZ(300px);
-}
-#cube .left {
-  background-color: green;
-  -webkit-transform: rotateY(-90deg) translateZ(300px);
-}
-#cube .top {
-  background-color: blue;
-  -webkit-transform: rotateX(90deg) translateZ(300px);
-}
-#cube .bottom {
-  background-color: purple;
-  -webkit-transform: rotateX(-90deg) translateZ(300px);
-}
+#cube .front { -webkit-transform: rotateY(0deg) translateZ(300px); }
+#cube .back { -webkit-transform: rotateX(180deg) translateZ(300px); }
+#cube .right { -webkit-transform: rotateY(90deg) translateZ(300px); }
+#cube .left { -webkit-transform: rotateY(-90deg) translateZ(300px); }
+#cube .top { -webkit-transform: rotateX(90deg) translateZ(300px); }
+#cube .bottom { -webkit-transform: rotateX(-90deg) translateZ(300px); }
 
 #cube {
   -webkit-transform: translateZ(-300px);
@@ -58,3 +42,19 @@
 #cube.show-left { -webkit-transform: translateZ(-300px) rotateY(90deg); }
 #cube.show-top { -webkit-transform: translateZ(-300px) rotateX(-90deg); }
 #cube.show-bottom { -webkit-transform: translateZ(-300px) rotateX(90deg); }
+
+#slides { display: hidden; }
+
+.face {
+  background-color: white;
+}
+
+.slide h1 {
+  float: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 20px;
+}
