@@ -18,11 +18,26 @@ function next_slide() {
   $("#cube").removeClass().addClass("show-" + face);
 }
 
+function h2d(h) {
+  return parseInt(h,16);
+}
+
 function display_slide(face, number) {
   var slide = $("#slide-" + number);
   var face = $("#cube ." + face);
   face.html(slide.html());
-  face.css("background-color", "#" + slide.attr("data-background"));
-  face.css("color", "#" + slide.attr("data-foreground"));
-  face.css("text-shadow", "black -1px -1px 0");
+
+  var bg = slide.attr("data-background");
+  var fg = slide.attr("data-foreground");
+  face.css("background-color", "#" + bg);
+  face.css("color", "#" + fg);
+
+  if (slide.attr("data-inset") === "shadow") {
+    var bg_rgb = new RGBColour(h2d(bg.substr(0, 2)), h2d(bg.substr(2, 2)), h2d(bg.substr(4, 2)));
+    var bg_hsl = bg_rgb.getHSL();
+    var shadow_hsl = new HSLColour(bg_hsl.h, bg_hsl.s, bg_hsl.l / 2);
+    face.css("text-shadow", shadow_hsl.getCSSHexadecimalRGB() + " -1px -1px 0");
+  } else {
+    face.css("text-shadow", "white 1px 1px 0");
+  }
 }
