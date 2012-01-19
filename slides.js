@@ -38,6 +38,6 @@ function display_slide(face, number) {
     var shadow_hsl = new HSLColour(bg_hsl.h, bg_hsl.s, bg_hsl.l / 2);
     face.css("text-shadow", shadow_hsl.getCSSHexadecimalRGB() + " -1px -1px 0");
   } else {
-    face.css("text-shadow", "white 1px 1px 0");
+    face.children("h1").css("text-shadow", "white 1px 1px 0");
   }
 }
