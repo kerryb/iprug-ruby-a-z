@@ -17,14 +17,23 @@ function populate_cube() {
 }
 
 function handleKeyDown(key) {
-  console.log(key);
-  if (key === 32) {
+  if ([32, 13, 39, 40, 74].indexOf(key) > -1) {
     next_slide();
+  } else if ([37, 38, 75].indexOf(key) > -1) {
+    previous_slide();
   }
 }
 
 function next_slide() {
-  var number = $("#slides").data("number") + 1;
+  switch_slide(1);
+}
+
+function previous_slide() {
+  switch_slide(-1);
+}
+
+function switch_slide(offset) {
+  var number = $("#slides").data("number") + offset;
   var slide = $("#slide-" + number);
   if (slide.length === 0) { return; }
   var face_name = slide.data("face_name");
