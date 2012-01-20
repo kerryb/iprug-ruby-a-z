@@ -2,29 +2,55 @@ $(document).ready(function(){
   $(document).keydown(function(e) {
     handleKeyDown(e.which);
   });
-  display_slide("front", 1);
+  populate_cube();
 });
 
+function populate_cube() {
+  display_slide("front", 1);
+  display_slide("right", 2);
+  display_slide("top", 3);
+  display_slide("back", 4);
+  display_slide("bottom", 5);
+  display_slide("left", 6);
+  $("#slides").data("number", 1);
+  $("#cube").data("face_name", "front");
+}
+
 function handleKeyDown(key) {
+  console.log(key);
   if (key === 32) {
     next_slide();
   }
 }
 
 function next_slide() {
-  var next = Math.floor(Math.random() * 6);
-  var face = ["front", "back", "left", "right", "top", "bottom"][next];
-  display_slide(face, 1);
-  $("#cube").removeClass().addClass("show-" + face);
+  var number = $("#slides").data("number") + 1;
+  var slide = $("#slide-" + number);
+  if (slide.length === 0) { return; }
+  var face_name = slide.data("face_name");
+  if (!face_name) {
+    face_name = random_other_face();
+    display_slide(face_name, number);
+  }
+  $("#cube").removeClass().addClass("show-" + face_name);
+  $("#slides").data("number", number);
+  $("#cube").data("face_name", face_name);
+}
+
+function random_other_face() {
+  not_this = function(f) { return f !== $("#cube").data("face_name") }
+  var next = Math.floor(Math.random() * 5);
+  return ["front", "back", "left", "right", "top", "bottom"].filter(not_this)[next];
 }
 
 function h2d(h) {
   return parseInt(h,16);
 }
 
-function display_slide(face, number) {
+function display_slide(face_name, number) {
   var slide = $("#slide-" + number);
-  var face = $("#cube ." + face);
+  var face = $("#cube ." + face_name);
+  slide.data("face_name", face_name);
   face.html(slide.html());
 
   var bg = slide.attr("data-background");
