@@ -52,11 +52,11 @@ function random_other_face() {
   return ["front", "back", "left", "right", "top", "bottom"].filter(not_this)[next];
 }
 
-function h2d(h) {
-  return parseInt(h,16);
-}
-
 function display_slide(face_name, number) {
+  function h2d(h) {
+    return parseInt(h,16);
+  }
+
   var slide = $("#slide-" + number);
   var face = $("#cube ." + face_name);
   var old_slide = $("#slide-" + face.data("slide"));
