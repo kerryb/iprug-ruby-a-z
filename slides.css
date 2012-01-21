@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800);
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
 
 body {
   background-color: black;
@@ -50,20 +50,14 @@ body {
 #slides { display: none; }
 
 .face {
-  font-family: "Open Sans", Helvetica, Arial, serif;
-}
-
-.face h1 {
-  font-weight: 800;
+  font-family: 'Varela Round', sans-serif;
 }
 
 .face h1.title {
-  font-size: 90px;
-  margin: 40px 0;
+  font-size: 85px;
 }
 
 .face p {
-  font-weight: 400;
   font-size: 20px;
 }
 
