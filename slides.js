@@ -59,7 +59,10 @@ function h2d(h) {
 function display_slide(face_name, number) {
   var slide = $("#slide-" + number);
   var face = $("#cube ." + face_name);
+  var old_slide = $("#slide-" + face.data("slide"));
+  old_slide.removeData("face_name");
   slide.data("face_name", face_name);
+  face.data("slide", number);
   face.html(slide.html());
 
   var bg = slide.attr("data-background");
