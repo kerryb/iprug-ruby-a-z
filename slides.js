@@ -3,6 +3,7 @@ $(document).ready(function(){
     handleKeyDown(e.which);
   });
   populate_cube();
+  show_initial_slide();
 });
 
 function populate_cube() {
@@ -12,8 +13,14 @@ function populate_cube() {
   display_slide("back", 4);
   display_slide("bottom", 5);
   display_slide("left", 6);
-  $("#slides").data("number", 1);
-  $("#cube").data("face_name", "front");
+}
+
+function show_initial_slide() {
+  if (location.hash === "") {
+    go_to_slide(1);
+  } else {
+    go_to_slide(parseInt(location.hash.substr(1), 10));
+  }
 }
 
 function handleKeyDown(key) {
@@ -25,25 +32,26 @@ function handleKeyDown(key) {
 }
 
 function next_slide() {
-  switch_slide(1);
+  go_to_slide($("#slides").data("number") + 1);
 }
 
 function previous_slide() {
-  switch_slide(-1);
+  go_to_slide($("#slides").data("number") - 1);
 }
 
-function switch_slide(offset) {
-  var number = $("#slides").data("number") + offset;
+function go_to_slide(number) {
   var slide = $("#slide-" + number);
-  if (slide.length === 0) { return; }
-  var face_name = slide.data("face_name");
-  if (!face_name) {
-    face_name = random_other_face();
-    display_slide(face_name, number);
+  if (slide.length !== 0) {
+    var face_name = slide.data("face_name");
+    if (!face_name) {
+      face_name = random_other_face();
+      display_slide(face_name, number);
+    }
+    $("#cube").removeClass().addClass("show-" + face_name);
+    $("#slides").data("number", number);
+    $("#cube").data("face_name", face_name);
+    location.hash = number;
   }
-  $("#cube").removeClass().addClass("show-" + face_name);
-  $("#slides").data("number", number);
-  $("#cube").data("face_name", face_name);
 }
 
 function random_other_face() {
