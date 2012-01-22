@@ -75,8 +75,13 @@ function display_slide(face_name, number) {
 
   var bg = slide.attr("data-background");
   var fg = slide.attr("data-foreground");
+  var image = slide.attr("data-image");
+  console.log(image);
   face.css("background-color", "#" + bg);
   face.css("color", "#" + fg);
+  if (image) {
+    face.css("background-image", "url('images/" + image + ".png')");
+  }
 
   if (slide.attr("data-inset") === "shadow") {
     var bg_rgb = new RGBColour(h2d(bg.substr(0, 2)), h2d(bg.substr(2, 2)), h2d(bg.substr(4, 2)));
