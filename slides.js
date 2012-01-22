@@ -55,7 +55,7 @@ function go_to_slide(number) {
 }
 
 function random_other_face() {
-  not_this = function(f) { return f !== $("#cube").data("face_name") }
+  not_this = function(f) { return f !== $("#cube").data("face_name"); };
   var next = Math.floor(Math.random() * 5);
   return ["front", "back", "left", "right", "top", "bottom"].filter(not_this)[next];
 }
