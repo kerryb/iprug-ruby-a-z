@@ -69,9 +69,3 @@ body {
 .face p {
   font-size: 20px;
 }
-
-.face pre {
-  font-family: 'Ubuntu Mono', sans-serif;
-  font-size: 40px;
-  margin: 200px 20px 0 20px;
-}
