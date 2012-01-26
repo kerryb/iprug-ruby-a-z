@@ -1,11 +1,13 @@
 $(document).ready(function(){
-  Slides.init();
+  Presentation.init();
 });
 
-var Slides = {
+var Presentation = {
+  current_slide: 1,
+
   init: function() {
     $(document).keydown(function(e) {
-      Slides.handleKeyDown(e.which);
+      Presentation.handleKeyDown(e.which);
     });
     this.populate_cube();
     this.show_initial_slide();
@@ -37,11 +39,11 @@ var Slides = {
   },
 
   next_slide: function() {
-    this.go_to_slide($("#slides").data("number") + 1);
+    this.go_to_slide(this.current_slide + 1);
   },
 
   previous_slide: function() {
-    this.go_to_slide($("#slides").data("number") - 1);
+    this.go_to_slide(this.current_slide - 1);
   },
 
   go_to_slide: function(number) {
@@ -53,7 +55,7 @@ var Slides = {
         this.display_slide(face_name, number);
       }
       $("#cube").removeClass().addClass("show-" + face_name);
-      $("#slides").data("number", number);
+      this.current_slide = number;
       $("#cube").data("face_name", face_name);
       location.hash = number;
     }
@@ -81,7 +83,6 @@ var Slides = {
     var bg = slide.attr("data-background");
     var fg = slide.attr("data-foreground");
     var image = slide.attr("data-image");
-    console.log(image);
     face.css("background-color", "#" + bg);
     face.css("color", "#" + fg);
     if (image) {
