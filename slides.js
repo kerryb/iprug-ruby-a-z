@@ -25,7 +25,6 @@ var Presentation = {
     }
   },
 
-
   init: function() {
     $(document).keydown(function(e) {
       Presentation.handleKeyDown(e.which);
