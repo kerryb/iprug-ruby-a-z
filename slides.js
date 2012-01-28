@@ -3,16 +3,26 @@ $(document).ready(function(){
 });
 
 var Presentation = {
-  current_slide: 1,
+  slides: [
+    {background: "ffff00", foreground: "0000ff", inset: "highlight", content: "#title-slide"},
+    {background: "6d7542", foreground: "d7608e", inset: "shadow", letter: "A", image: "activesupport"},
+    {foreground: "ff0000", inset: "shadow", letter: "B", image: "blocks"},
+    {foreground: "ffff00", inset: "shadow", letter: "C", image: "community"},
+    {foreground: "ff00ff", inset: "shadow", letter: "D", image: "duck_typing"},
+    {foreground: "ff00ff", inset: "shadow", letter: "E"}
+  ],
+
+  current_slide: 0,
   current_face: "front",
+
   cube: {
     faces: [
-      {name: "front", slide: 1},
-      {name: "right", slide: 2},
-      {name: "top", slide: 3},
-      {name: "back", slide: 4},
-      {name: "bottom", slide: 5},
-      {name: "left", slide: 6}
+      {name: "front", slide: 0},
+      {name: "right", slide: 1},
+      {name: "top", slide: 2},
+      {name: "back", slide: 3},
+      {name: "bottom", slide: 4},
+      {name: "left", slide: 5}
     ],
     face_with_slide: function(number) {
       return this.faces.filter(function(f) { return f.slide === number; })[0];
@@ -35,7 +45,7 @@ var Presentation = {
 
   show_initial_slide: function() {
     if (location.hash === "") {
-      this.go_to_slide(1);
+      this.go_to_slide(0);
     } else {
       this.go_to_slide(parseInt(location.hash.substr(1), 10));
     }
@@ -57,12 +67,8 @@ var Presentation = {
     this.go_to_slide(this.current_slide - 1);
   },
 
-  slide_element: function(number) { return $("#slide-" + number); },
-  face_element: function(name) { return $("#cube ." + name); },
-
   go_to_slide: function(number) {
-    var slide = this.slide_element(number);
-    if (slide.length !== 0) {
+    if (number >= 0 && number < this.slides.length) {
       var face = this.cube.face_with_slide(number);
       var face_name;
       if (face) {
@@ -74,7 +80,11 @@ var Presentation = {
       $("#cube").removeClass().addClass("show-" + face_name);
       this.current_slide = number;
       this.current_face = face_name;
-      location.hash = number;
+      if (number === 0) {
+        location.hash = "";
+      } else {
+        location.hash = number;
+      }
     }
   },
 
@@ -90,27 +100,23 @@ var Presentation = {
       return parseInt(h,16);
     }
 
-    var slide = this.slide_element(number);
-    var face = this.face_element(face_name);
+    var slide = this.slides[number];
+    var face = $("#cube ." + face_name);
     this.cube.face_named(face_name).slide = number;
-    face.html(slide.html());
-
-    var bg = slide.attr("data-background");
-    var fg = slide.attr("data-foreground");
-    var image = slide.attr("data-image");
-    face.css("background-color", "#" + bg);
-    face.css("color", "#" + fg);
-    if (image) {
-      face.css("background-image", "url('images/" + image + ".png')");
+    if (slide.content) {
+      face.html($(slide.content).html());
+    } else {
+      face.html('<h1 class="letter">' + slide.letter + '</h1>');
     }
 
-    if (slide.attr("data-inset") === "shadow") {
-      var bg_rgb = new RGBColour(h2d(bg.substr(0, 2)), h2d(bg.substr(2, 2)), h2d(bg.substr(4, 2)));
-      var bg_hsl = bg_rgb.getHSL();
-      var shadow_hsl = new HSLColour(bg_hsl.h, bg_hsl.s, bg_hsl.l / 2);
-      face.css("text-shadow", shadow_hsl.getCSSHexadecimalRGB() + " -1px -1px 0");
+    face.css("color", "#" + slide.foreground);
+    if (slide.background) { face.css("background-color", "#" + slide.background); }
+    if (slide.image) { face.css("background-image", "url('images/" + slide.image + ".png')"); }
+
+    if (slide.inset === "shadow") {
+      face.css("text-shadow", "black -1px -1px 0");
     } else {
-      face.children("h1").css("text-shadow", "white 1px 1px 0");
+      face.css("text-shadow", "white 1px 1px 0");
     }
   }
 };
