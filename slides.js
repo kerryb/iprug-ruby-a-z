@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 var Presentation = {
   current_slide: 1,
+  current_face: "front",
 
   init: function() {
     $(document).keydown(function(e) {
@@ -51,18 +52,19 @@ var Presentation = {
     if (slide.length !== 0) {
       var face_name = slide.data("face_name");
       if (!face_name) {
-        face_name = random_other_face();
+        face_name = this.random_other_face();
         this.display_slide(face_name, number);
       }
       $("#cube").removeClass().addClass("show-" + face_name);
       this.current_slide = number;
-      $("#cube").data("face_name", face_name);
+      this.current_face = face_name;
       location.hash = number;
     }
   },
 
   random_other_face: function() {
-    not_this = function(f) { return f !== $("#cube").data("face_name"); };
+    function not_this(f) { return f !== this.current_face; }
+
     var next = Math.floor(Math.random() * 5);
     return ["front", "back", "left", "right", "top", "bottom"].filter(not_this)[next];
   },
