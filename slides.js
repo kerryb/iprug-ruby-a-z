@@ -51,8 +51,11 @@ var Presentation = {
     this.go_to_slide(this.current_slide - 1);
   },
 
+  slide_element: function(number) { return $("#slide-" + number); },
+  face_element: function(name) { return $("#cube ." + name); },
+
   go_to_slide: function(number) {
-    var slide = $("#slide-" + number);
+    var slide = this.slide_element(number);
     if (slide.length !== 0) {
       var face = this.faces.filter(function(f) { return f.slide === number; })[0];
       var face_name;
@@ -81,8 +84,8 @@ var Presentation = {
       return parseInt(h,16);
     }
 
-    var slide = $("#slide-" + number);
-    var face = $("#cube ." + face_name);
+    var slide = this.slide_element(number);
+    var face = this.face_element(face_name);
     this.faces.filter(function(f) { return f.name === face_name; })[0].slide = number;
     face.html(slide.html());
 
