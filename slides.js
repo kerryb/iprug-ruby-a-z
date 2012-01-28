@@ -5,6 +5,15 @@ $(document).ready(function(){
 var Presentation = {
   current_slide: 1,
   current_face: "front",
+  faces: [
+    {name: "front", slide: 1},
+    {name: "right", slide: 2},
+    {name: "top", slide: 3},
+    {name: "back", slide: 4},
+    {name: "bottom", slide: 5},
+    {name: "left", slide: 6}
+  ],
+
 
   init: function() {
     $(document).keydown(function(e) {
@@ -15,12 +24,7 @@ var Presentation = {
   },
 
   populate_cube: function() {
-    this.display_slide("front", 1);
-    this.display_slide("right", 2);
-    this.display_slide("top", 3);
-    this.display_slide("back", 4);
-    this.display_slide("bottom", 5);
-    this.display_slide("left", 6);
+    this.faces.forEach(function(face) { Presentation.display_slide(face.name, face.slide); });
   },
 
   show_initial_slide: function() {
@@ -50,8 +54,11 @@ var Presentation = {
   go_to_slide: function(number) {
     var slide = $("#slide-" + number);
     if (slide.length !== 0) {
-      var face_name = slide.data("face_name");
-      if (!face_name) {
+      var face = this.faces.filter(function(f) { return f.slide === number; })[0];
+      var face_name;
+      if (face) {
+        face_name = face.name;
+      } else {
         face_name = this.random_other_face();
         this.display_slide(face_name, number);
       }
@@ -76,10 +83,7 @@ var Presentation = {
 
     var slide = $("#slide-" + number);
     var face = $("#cube ." + face_name);
-    var old_slide = $("#slide-" + face.data("slide"));
-    old_slide.removeData("face_name");
-    slide.data("face_name", face_name);
-    face.data("slide", number);
+    this.faces.filter(function(f) { return f.name === face_name; })[0].slide = number;
     face.html(slide.html());
 
     var bg = slide.attr("data-background");
