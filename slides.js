@@ -9,7 +9,7 @@ var Presentation = {
     {foreground: "ff0000", inset: "shadow", letter: "B", images: ["blocks"]},
     {foreground: "0000ff", inset: "shadow", letter: "C", images: ["community", "coffeescript"]},
     {foreground: "ff00ff", inset: "shadow", letter: "D", images: ["duck_typing", "dhh"]},
-    {foreground: "ff00ff", inset: "shadow", letter: "E"}
+    {foreground: "8888ff", inset: "highlight", letter: "E", images: ["enumerable"]}
   ],
 
   current_slide: 0,
