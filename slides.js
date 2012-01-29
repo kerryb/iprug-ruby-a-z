@@ -11,7 +11,8 @@ var Presentation = {
     {foreground: "ff00ff", inset: "shadow", letter: "D", images: ["duck_typing", "dhh"]},
     {foreground: "8888ff", inset: "highlight", letter: "E", images: ["enumerable"]},
     {foreground: "8888ff", inset: "highlight", letter: "F", images: [""]},
-    {foreground: "d12f2d", inset: "shadow", letter: "G", images: ["gems"]}
+    {foreground: "d12f2d", inset: "shadow", letter: "G", images: ["gems"]},
+    {foreground: "0000ff", inset: "shadow", letter: "H", images: ["happiness"]}
   ],
 
   current_slide: 0,
