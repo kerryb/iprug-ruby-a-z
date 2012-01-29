@@ -13,7 +13,8 @@ var Presentation = {
     {foreground: "8888ff", inset: "highlight", letter: "F", images: [""]},
     {foreground: "d12f2d", inset: "shadow", letter: "G", images: ["gems"]},
     {foreground: "0000ff", inset: "shadow", letter: "H", images: ["happiness"]},
-    {foreground: "ff8800", inset: "shadow", letter: "H", images: ["irb"]}
+    {foreground: "ff8800", inset: "shadow", letter: "I", images: ["irb"]},
+    {foreground: "f13e3e", inset: "shadow", letter: "J", images: ["java", "jruby"]}
   ],
 
   current_slide: 0,
