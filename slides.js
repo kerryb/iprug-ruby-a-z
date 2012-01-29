@@ -75,6 +75,7 @@ var Presentation = {
       this.display_image(this.face_element_named(this.current_face),
           this.slides[this.current_slide].images[this.current_image]);
     } else {
+      this.current_image = 0;
       this.go_to_slide(this.current_slide + 1);
     }
   },
@@ -85,6 +86,7 @@ var Presentation = {
       this.display_image(this.face_element_named(this.current_face),
           this.slides[this.current_slide].images[this.current_image]);
     } else {
+      this.current_image = 0;
       this.go_to_slide(this.current_slide - 1);
     }
   },
