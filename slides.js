@@ -9,7 +9,9 @@ var Presentation = {
     {foreground: "ff0000", inset: "shadow", letter: "B", images: ["blocks"]},
     {foreground: "0000ff", inset: "shadow", letter: "C", images: ["community", "coffeescript"]},
     {foreground: "ff00ff", inset: "shadow", letter: "D", images: ["duck_typing", "dhh"]},
-    {foreground: "8888ff", inset: "highlight", letter: "E", images: ["enumerable"]}
+    {foreground: "8888ff", inset: "highlight", letter: "E", images: ["enumerable"]},
+    {foreground: "8888ff", inset: "highlight", letter: "F", images: [""]},
+    {foreground: "d12f2d", inset: "shadow", letter: "G", images: ["gems"]}
   ],
 
   current_slide: 0,
