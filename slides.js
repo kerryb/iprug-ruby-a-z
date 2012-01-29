@@ -7,7 +7,7 @@ var Presentation = {
     {background: "ffff00", foreground: "0000ff", inset: "highlight", content: "#title-slide"},
     {foreground: "d7608e", inset: "shadow", letter: "A", images: ["activesupport"]},
     {foreground: "ff0000", inset: "shadow", letter: "B", images: ["blocks"]},
-    {foreground: "ffff00", inset: "shadow", letter: "C", images: ["community"]},
+    {foreground: "0000ff", inset: "shadow", letter: "C", images: ["community", "coffeescript"]},
     {foreground: "ff00ff", inset: "shadow", letter: "D", images: ["duck_typing", "dhh"]},
     {foreground: "ff00ff", inset: "shadow", letter: "E"}
   ],
