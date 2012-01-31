@@ -18,7 +18,8 @@ var Presentation = {
     {foreground: "#ffff00", inset: "shadow", letter: "K", images: ["kitten"]},
     {foreground: "#aaaaaa", inset: "shadow", letter: "L", images: [""]},
     {foreground: "#d5b87c", inset: "shadow", letter: "M", images: ["magic", "matz"]},
-    {background: "rgba(255, 255, 255, 0.5)", foreground: "#000000", inset: "highlight", letter: "N", content: "#nil"}
+    {background: "rgba(255, 255, 255, 0.5)", foreground: "#000000", inset: "highlight", letter: "N", content: "#nil"},
+    {foreground: "#ff0000", inset: "shadow", letter: "O", images: ["open"]}
   ],
 
   current_slide: 0,
