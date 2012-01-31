@@ -52,22 +52,26 @@ body {
   font-family: 'Varela Round', sans-serif;
   background-repeat: no-repeat;
   background-position: center center;
-  text-align: center;
 }
 
 .face h1.title {
   font-size: 85px;
+  text-align: center;
+}
+
+.face h2 {
+  font-size: 40px;
+  text-align: center;
 }
 
 .face h1.letter {
-  position: absolute;
-  left: 40px;
-  top: 10px;
   font-size: 120px;
-  margin: 0;
+  margin: 5px 20px;
   padding: 0;
 }
 
 .face p {
-  font-size: 20px;
+  font-size: 40px;
+  padding: 10px;
+  margin: 10px 30px;
 }

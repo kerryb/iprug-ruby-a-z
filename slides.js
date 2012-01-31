@@ -4,20 +4,21 @@ $(document).ready(function(){
 
 var Presentation = {
   slides: [
-    {background: "ffff00", foreground: "0000ff", inset: "highlight", content: "#title-slide"},
-    {foreground: "d7608e", inset: "shadow", letter: "A", images: ["activesupport"]},
-    {foreground: "ff0000", inset: "shadow", letter: "B", images: ["blocks"]},
-    {foreground: "0000ff", inset: "shadow", letter: "C", images: ["community", "coffeescript"]},
-    {foreground: "ff00ff", inset: "shadow", letter: "D", images: ["duck_typing", "dhh"]},
-    {foreground: "8888ff", inset: "highlight", letter: "E", images: ["enumerable"]},
-    {foreground: "aaaaaa", inset: "shadow", letter: "F", images: [""]},
-    {foreground: "d12f2d", inset: "shadow", letter: "G", images: ["gems"]},
-    {foreground: "0000ff", inset: "shadow", letter: "H", images: ["happiness"]},
-    {foreground: "ff8800", inset: "shadow", letter: "I", images: ["irb"]},
-    {foreground: "f13e3e", inset: "shadow", letter: "J", images: ["java", "jruby"]},
-    {foreground: "ffff00", inset: "shadow", letter: "K", images: ["kitten"]},
-    {foreground: "aaaaaa", inset: "shadow", letter: "L", images: [""]},
-    {foreground: "d5b87c", inset: "shadow", letter: "M", images: ["magic", "matz"]}
+    {background: "#ffff00", foreground: "#0000ff", inset: "highlight", content: "#title"},
+    {foreground: "#d7608e", inset: "shadow", letter: "A", images: ["activesupport"]},
+    {foreground: "#ff0000", inset: "shadow", letter: "B", images: ["blocks"]},
+    {foreground: "#0000ff", inset: "shadow", letter: "C", images: ["community", "coffeescript"]},
+    {foreground: "#ff00ff", inset: "shadow", letter: "D", images: ["duck_typing", "dhh"]},
+    {foreground: "#8888ff", inset: "highlight", letter: "E", images: ["enumerable"]},
+    {foreground: "#aaaaaa", inset: "shadow", letter: "F", images: [""]},
+    {foreground: "#d12f2d", inset: "shadow", letter: "G", images: ["gems"]},
+    {foreground: "#0000ff", inset: "shadow", letter: "H", images: ["happiness"]},
+    {foreground: "#ff8800", inset: "shadow", letter: "I", images: ["irb"]},
+    {foreground: "#f13e3e", inset: "shadow", letter: "J", images: ["java", "jruby"]},
+    {foreground: "#ffff00", inset: "shadow", letter: "K", images: ["kitten"]},
+    {foreground: "#aaaaaa", inset: "shadow", letter: "L", images: [""]},
+    {foreground: "#d5b87c", inset: "shadow", letter: "M", images: ["magic", "matz"]},
+    {background: "rgba(255, 255, 255, 0.5)", foreground: "#000000", inset: "highlight", letter: "N", content: "#nil"}
   ],
 
   current_slide: 0,
@@ -141,11 +142,13 @@ var Presentation = {
       face.html('<h1 class="letter">' + slide.letter + '</h1>');
     }
 
-    face.css("color", "#" + slide.foreground);
-    if (slide.background) { face.css("background-color", "#" + slide.background); }
+    face.css("color", slide.foreground);
+    if (slide.background) { face.css("background-color", slide.background); }
     if (slide.images) {
       this.display_image(face, slide.images[0]);
       this.current_image = 0;
+    } else {
+      this.remove_image(face);
     }
 
     if (slide.inset === "shadow") {
@@ -157,5 +160,9 @@ var Presentation = {
 
   display_image: function(face, image) {
     face.css("background-image", "url('images/" + image + ".png')");
+  },
+
+  remove_image: function(face) {
+    face.css("background-image", "");
   }
 };
