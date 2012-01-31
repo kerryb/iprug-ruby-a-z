@@ -17,7 +17,7 @@ var Presentation = {
     {foreground: "f13e3e", inset: "shadow", letter: "J", images: ["java", "jruby"]},
     {foreground: "ffff00", inset: "shadow", letter: "K", images: ["kitten"]},
     {foreground: "aaaaaa", inset: "shadow", letter: "L", images: [""]},
-    {foreground: "d5b87c", inset: "shadow", letter: "M", images: ["magic"]}
+    {foreground: "d5b87c", inset: "shadow", letter: "M", images: ["magic", "matz"]}
   ],
 
   current_slide: 0,
