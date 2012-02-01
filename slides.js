@@ -16,7 +16,7 @@ var Presentation = {
     {foreground: "#f13e3e", inset: "shadow", letter: "J", images: ["java", "jruby"]},
     {foreground: "#ffff00", inset: "shadow", letter: "K", images: ["kitten"]},
     {foreground: "#d5b87c", inset: "shadow", letter: "M", images: ["magic", "matz"]},
-    {background: "rgba(255, 255, 255, 0.5)", foreground: "#000000", inset: "highlight", letter: "N", content: "#nil"},
+    {background: "rgba(255, 255, 255, 0.7)", foreground: "#000000", inset: "highlight", letter: "N", content: "#nil"},
     {foreground: "#ff0000", inset: "shadow", letter: "O", images: ["open"]},
     {foreground: "#2b423f", inset: "shadow", letter: "S", images: ["library"]},
     {background: "#cccccc", foreground: "#2e5d67", inset: "highlight", letter: "T", images: ["tdd"]},
