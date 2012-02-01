@@ -20,7 +20,8 @@ var Presentation = {
     {foreground: "#ff0000", inset: "shadow", letter: "O", images: ["open"]},
     {foreground: "#2b423f", inset: "shadow", letter: "S", images: ["library"]},
     {background: "#cccccc", foreground: "#2e5d67", inset: "highlight", letter: "T", images: ["tdd"]},
-    {foreground: "#dddfdf", inset: "shadow", letter: "U", images: ["obiwan"]}
+    {foreground: "#dddfdf", inset: "shadow", letter: "U", images: ["obiwan"]},
+    {background: "#58aaf7", foreground: "#d6471c", inset: "highlight", letter: "V", images: ["vim"]}
   ],
 
   current_slide: 0,
