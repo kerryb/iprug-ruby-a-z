@@ -10,16 +10,15 @@ var Presentation = {
     {foreground: "#0000ff", inset: "shadow", letter: "C", images: ["community", "coffeescript"]},
     {foreground: "#ff00ff", inset: "shadow", letter: "D", images: ["duck_typing", "dhh"]},
     {foreground: "#8888ff", inset: "highlight", letter: "E", images: ["enumerable"]},
-    {foreground: "#aaaaaa", inset: "shadow", letter: "F", images: [""]},
     {foreground: "#d12f2d", inset: "shadow", letter: "G", images: ["gems"]},
     {foreground: "#0000ff", inset: "shadow", letter: "H", images: ["happiness"]},
     {foreground: "#ff8800", inset: "shadow", letter: "I", images: ["irb"]},
     {foreground: "#f13e3e", inset: "shadow", letter: "J", images: ["java", "jruby"]},
     {foreground: "#ffff00", inset: "shadow", letter: "K", images: ["kitten"]},
-    {foreground: "#aaaaaa", inset: "shadow", letter: "L", images: [""]},
     {foreground: "#d5b87c", inset: "shadow", letter: "M", images: ["magic", "matz"]},
     {background: "rgba(255, 255, 255, 0.5)", foreground: "#000000", inset: "highlight", letter: "N", content: "#nil"},
-    {foreground: "#ff0000", inset: "shadow", letter: "O", images: ["open"]}
+    {foreground: "#ff0000", inset: "shadow", letter: "O", images: ["open"]},
+    {foreground: "#2b423f", inset: "shadow", letter: "S", images: ["library"]}
   ],
 
   current_slide: 0,
