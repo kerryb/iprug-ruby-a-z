@@ -22,7 +22,9 @@ var Presentation = {
     {background: "#cccccc", foreground: "#2e5d67", inset: "highlight", letter: "T", images: ["tdd"]},
     {foreground: "#dddfdf", inset: "shadow", letter: "U", images: ["obiwan"]},
     {background: "#58aaf7", foreground: "#d6471c", inset: "highlight", letter: "V", images: ["vim"]},
-    {foreground: "#ff0000", inset: "highlight", letter: "W", images: ["why"]}
+    {foreground: "#ff0000", inset: "highlight", letter: "W", images: ["why"]},
+    {foreground: "#f33f57", inset: "shadow", letter: "X", images: ["xml"]},
+    {foreground: "white", inset: "shadow", letter: "Z", images: ["zero"]}
   ],
 
   current_slide: 0,

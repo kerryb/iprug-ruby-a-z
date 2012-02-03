@@ -75,3 +75,8 @@ body {
   padding: 10px;
   margin: 10px 30px;
 }
+
+.face p.massive {
+  text-align: center;
+  font-size: 300px;
+}
