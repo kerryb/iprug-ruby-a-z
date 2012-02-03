@@ -10,20 +10,26 @@ var Presentation = {
     {foreground: "#0000ff", inset: "shadow", letter: "C", images: ["community", "coffeescript"]},
     {foreground: "#ff00ff", inset: "shadow", letter: "D", images: ["duck_typing", "dhh"]},
     {foreground: "#8888ff", inset: "highlight", letter: "E", images: ["enumerable"]},
+    // F: Functional programming
     {foreground: "#d12f2d", inset: "shadow", letter: "G", images: ["gems"]},
     {foreground: "#0000ff", inset: "shadow", letter: "H", images: ["happiness"]},
     {foreground: "#ff8800", inset: "shadow", letter: "I", images: ["irb"]},
     {foreground: "#f13e3e", inset: "shadow", letter: "J", images: ["java", "jruby"]},
     {foreground: "#ffff00", inset: "shadow", letter: "K", images: ["kitten"]},
+    // L: Lambda?
     {foreground: "#d5b87c", inset: "shadow", letter: "M", images: ["magic", "matz"]},
     {background: "rgba(255, 255, 255, 0.7)", foreground: "#000000", inset: "highlight", letter: "N", content: "#nil"},
     {foreground: "#ff0000", inset: "shadow", letter: "O", images: ["open"]},
+    // P: Pernickitiness, perfectionism, pragmatism
+    // Q: Quick hack
+    // R: Ruby, rspec, rails, rake, rdoc, rack, rvm; Reminder
     {foreground: "#2b423f", inset: "shadow", letter: "S", images: ["library"]},
     {background: "#cccccc", foreground: "#2e5d67", inset: "highlight", letter: "T", images: ["tdd"]},
     {foreground: "#dddfdf", inset: "shadow", letter: "U", images: ["obiwan"]},
     {background: "#58aaf7", foreground: "#d6471c", inset: "highlight", letter: "V", images: ["vim"]},
     {foreground: "#ff0000", inset: "highlight", letter: "W", images: ["why"]},
     {foreground: "#f33f57", inset: "shadow", letter: "X", images: ["xml"]},
+    // Y
     {foreground: "white", inset: "shadow", letter: "Z", images: ["zero"]}
   ],
 
