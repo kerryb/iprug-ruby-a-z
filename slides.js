@@ -77,9 +77,7 @@ var Presentation = {
   },
 
   show_initial_slide: function() {
-    if (location.hash === "") {
-      this.go_to_slide(0);
-    } else {
+    if (location.hash !== "") {
       this.go_to_slide(parseInt(location.hash.substr(1), 10));
     }
   },
