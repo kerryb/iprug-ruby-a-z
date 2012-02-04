@@ -59,11 +59,17 @@ var Presentation = {
   },
 
   init: function() {
+    this.preload_images();
     $(document).keydown(function(e) {
       Presentation.handleKeyDown(e.which);
     });
     this.cube.populate();
     this.show_initial_slide();
+  },
+
+  preload_images: function() {
+    images = $.map(this.slides.map(function(s) {return s.images;}), function(a) {return a;});
+    images.forEach(function(i) { (new Image()).src = "images/" + i + ".png"; });
   },
 
   face_element_named: function(name) {
