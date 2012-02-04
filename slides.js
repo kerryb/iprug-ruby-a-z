@@ -135,7 +135,7 @@ var Presentation = {
   },
 
   random_other_face: function() {
-    function not_this(f) { return f !== this.current_face; }
+    function not_this(f) { return f !== Presentation.current_face; }
 
     var next = Math.floor(Math.random() * 5);
     return ["front", "back", "left", "right", "top", "bottom"].filter(not_this)[next];
