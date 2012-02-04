@@ -20,7 +20,7 @@ var Presentation = {
     {foreground: "#d5b87c", inset: "shadow", letter: "M", images: ["magic", "matz"]},
     {background: "rgba(255, 255, 255, 0.7)", foreground: "#000000", inset: "highlight", letter: "N", content: "#nil"},
     {foreground: "#ff0000", inset: "shadow", letter: "O", images: ["open"]},
-    {foreground: "#f36118", inset: "shadow", letter: "P", images: ["mr_fussy"]},
+    {foreground: "#f36118", inset: "shadow", letter: "P", images: ["mr_fussy", "pragmatic"]},
     // Q: Quick hack
     // R: Ruby, rspec, rails, rake, rdoc, rack, rvm; Reminder
     {foreground: "#2b423f", inset: "shadow", letter: "S", images: ["library"]},
