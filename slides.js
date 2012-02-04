@@ -30,7 +30,8 @@ var Presentation = {
     {foreground: "#ff0000", inset: "highlight", letter: "W", images: ["why"]},
     {foreground: "#f33f57", inset: "shadow", letter: "X", images: ["xml"]},
     // Y
-    {foreground: "white", inset: "shadow", letter: "Z", images: ["zero"]}
+    {foreground: "white", inset: "shadow", letter: "Z", images: ["zero"]},
+    {background: "#cccccc", foreground: "#444444", content: "#credits"}
   ],
 
   current_slide: 0,
