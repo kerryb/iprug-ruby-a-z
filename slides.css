@@ -192,7 +192,12 @@ body {
   box-shadow: inset -3px -3px 7px 7px rgba(0, 0, 0, 0.3);
   font-family: 'Varela Round', sans-serif;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 0 0;
+  -webkit-transition: background-position 0.5s ease-in-out;
+  -moz-transition: background-position 0.5s ease-in-out;
+  -ms-transition: background-position 0.5s ease-in-out;
+  -o-transition: background-position 0.5s ease-in-out;
+  transition: background-position 0.5s ease-in-out;
 }
 
 .face h1 {
