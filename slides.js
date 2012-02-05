@@ -16,7 +16,8 @@ var Presentation = {
     {foreground: "#ff8800", inset: "shadow", letter: "I", images: ["irb"]},
     {foreground: "#f13e3e", inset: "shadow", letter: "J", images: ["java", "jruby"]},
     {foreground: "#ffff00", inset: "shadow", letter: "K", images: ["kitten"]},
-    // L: Lambda? Learning? Love?
+    {foreground: "#4400ff", inset: "shadow", letter: "L", images: ["licence"]},
+    // L: Lambda? Learning? Love? Looping? Lunacy (programming with nothing)? Licence
     {foreground: "#d5b87c", inset: "shadow", letter: "M", images: ["magic", "matz"]},
     {background: "rgba(255, 255, 255, 0.7)", foreground: "#000000", inset: "highlight", letter: "N", content: "#nil"},
     {foreground: "#ff0000", inset: "shadow", letter: "O", images: ["open"]},
@@ -29,7 +30,7 @@ var Presentation = {
     {background: "#58aaf7", foreground: "#d6471c", inset: "highlight", letter: "V", images: ["vim"]},
     {foreground: "#ff0000", inset: "highlight", letter: "W", images: ["why"]},
     {foreground: "#f33f57", inset: "shadow", letter: "X", images: ["xml"]},
-    // Y
+    // Y: Young?
     {foreground: "white", inset: "shadow", letter: "Z", images: ["zero"]},
     {background: "#cccccc", foreground: "#444444", content: "#credits"}
   ],
