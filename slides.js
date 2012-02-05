@@ -63,6 +63,7 @@ var Presentation = {
     this.preload_images();
     $("#notes-0").show();
     $("#toggle-notes").click(Presentation.toggle_notes);
+    $("#notes a").attr("target", "ruby_a_to_z_links");
     $(document).keydown(function(e) {
       Presentation.handleKeyDown(e.which);
     });
