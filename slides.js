@@ -97,10 +97,12 @@ var Presentation = {
   },
 
   handleKeyDown: function(key) {
-    if ([32, 13, 39, 40, 74].indexOf(key) > -1) {
+    if ([32, 13, 39, 40].indexOf(key) > -1) {
       this.next();
-    } else if ([37, 38, 75].indexOf(key) > -1) {
+    } else if ([37, 38].indexOf(key) > -1) {
       this.previous();
+    } else if (key >= 65 && key <= 90) {
+      this.go_to_slide(key - 64);
     }
   },
 
