@@ -22,7 +22,7 @@ var Presentation = {
     {foreground: "#ff0000", inset: "shadow", letter: "O", images: ["open"]},
     {foreground: "#f36118", inset: "shadow", letter: "P", images: ["mr_fussy", "pragmatic"]},
     {foreground: "#af282a", inset: "shadow", letter: "Q", images: ["quiz"]},
-    {foreground: "#4444ff", inset: "highlight", letter: "R", images: ["rake", "rack", "rvm", "rails", "rspec", "reminder"]},
+    {foreground: "#4444ff", inset: "highlight", letter: "R", images: ["rake", "rack", "rvm", "rails", "rspec", "reminder", "toolbox"]},
     {foreground: "#2b423f", inset: "shadow", letter: "S", images: ["library"]},
     {background: "#cccccc", foreground: "#2e5d67", inset: "highlight", letter: "T", images: ["tdd"]},
     {foreground: "#dddfdf", inset: "shadow", letter: "U", images: ["obiwan"]},
