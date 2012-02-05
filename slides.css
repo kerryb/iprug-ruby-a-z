@@ -95,3 +95,11 @@ body {
   text-align: center;
   font-size: 300px;
 }
+
+#licence {
+  text-align: center;
+}
+
+#licence img {
+  text-shadow: white 1px 1px 0";
+}
