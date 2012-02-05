@@ -110,6 +110,9 @@ var Presentation = {
       this.previous();
     } else if (key >= 65 && key <= 90) {
       this.go_to_slide(key - 64);
+    } else if (key === 48) {
+      this.go_to_slide(0);
+      $("#cube").removeClass().addClass("initial");
     }
   },
 
