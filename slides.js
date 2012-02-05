@@ -37,6 +37,7 @@ var Presentation = {
   current_slide: 0,
   current_image: 0,
   current_face: "front",
+  notes_showing: false,
 
   cube: {
     faces: [
@@ -60,6 +61,7 @@ var Presentation = {
 
   init: function() {
     this.preload_images();
+    $("#toggle-notes").click(Presentation.toggle_notes);
     $(document).keydown(function(e) {
       Presentation.handleKeyDown(e.which);
     });
@@ -79,6 +81,18 @@ var Presentation = {
   show_initial_slide: function() {
     if (location.hash !== "") {
       this.go_to_slide(parseInt(location.hash.substr(1), 10));
+    }
+  },
+
+  toggle_notes: function() {
+    if (self.notes_showing) {
+      $("#main").css("right", "0");
+      $("#notes").css("left", "100%");
+      self.notes_showing = false;
+    } else {
+      $("#main").css("right", "30%");
+      $("#notes").css("left", "70%");
+      self.notes_showing = true;
     }
   },
 

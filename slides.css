@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,700);
+
 
 body {
   background-color: black;
@@ -39,6 +41,35 @@ body {
 #cube.show-left { -webkit-transform: translateZ(-300px) rotateY(90deg); }
 #cube.show-top { -webkit-transform: translateZ(-300px) rotateX(-90deg); }
 #cube.show-bottom { -webkit-transform: translateZ(-300px) rotateX(90deg); }
+
+#main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: right 0.5s ease-in-out;
+}
+
+#notes {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  -webkit-transition: left 0.5s ease-in-out;
+  color: #ccc;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  padding: 30px 10px;
+}
+
+#toggle-notes {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
 
 #slides { display: none; }
 
@@ -83,6 +114,10 @@ body {
   margin: 10px 30px;
 }
 
+.face tt {
+  font-face: 'Ubuntu Mono', monospace;
+}
+
 .face ul {
   font-size: 15px;
 }
@@ -101,5 +136,5 @@ body {
 }
 
 #licence img {
-  text-shadow: white 1px 1px 0";
+  text-shadow: white 1px 1px 0;
 }
