@@ -65,7 +65,9 @@ var Presentation = {
     $("#toggle-notes").click(Presentation.toggle_notes);
     $("#notes a").attr("target", "ruby_a_to_z_links");
     $(document).keydown(function(e) {
-      Presentation.handleKeyDown(e.which);
+      Presentation.handle_key_down(e.which);
+    }).keypress(function(e) {
+      Presentation.handle_key_press(e.which);
     });
     this.cube.populate();
     this.show_initial_slide();
@@ -103,13 +105,19 @@ var Presentation = {
     }
   },
 
-  handleKeyDown: function(key) {
-    if ([32, 13, 39, 40].indexOf(key) > -1) {
+  handle_key_down: function(key) {
+    if (key === 39 || key === 40) {
       this.next();
-    } else if ([37, 38].indexOf(key) > -1) {
+    } else if (key === 37 || key === 38) {
       this.previous();
-    } else if (key >= 65 && key <= 90) {
-      this.go_to_slide(key - 64);
+    }
+  },
+
+  handle_key_press: function(key) {
+    if (key === 32 || key === 13) {
+      this.next();
+    } else if (key >= 97 && key <= 122) {
+      this.go_to_slide(key - 96);
     } else if (key === 48) {
       this.go_to_slide(0);
       $("#cube").removeClass().addClass("initial");
