@@ -80,7 +80,12 @@ var Presentation = {
 
   show_initial_slide: function() {
     if (location.hash !== "") {
-      this.go_to_slide(parseInt(location.hash.substr(1), 10));
+      var requested = location.hash.substr(1).split(".");
+      this.go_to_slide(parseInt(requested[0], 10));
+      if (requested[1]) {
+        this.current_image = parseInt(requested[1], 10);
+        this.change_image();
+      }
     }
   },
 
@@ -114,8 +119,7 @@ var Presentation = {
 
     if (has_another_image()) {
       this.current_image += 1;
-      this.display_image(this.face_element_named(this.current_face),
-          this.slides[this.current_slide].images[this.current_image]);
+      this.change_image();
     } else {
       this.current_image = 0;
       this.go_to_slide(this.current_slide + 1);
@@ -125,12 +129,18 @@ var Presentation = {
   previous: function() {
     if (Presentation.current_image > 0) {
       this.current_image -= 1;
-      this.display_image(this.face_element_named(this.current_face),
-          this.slides[this.current_slide].images[this.current_image]);
+      this.change_image();
     } else {
       this.current_image = 0;
       this.go_to_slide(this.current_slide - 1);
+      this.change_image();
     }
+  },
+
+  change_image: function() {
+    this.display_image(this.face_element_named(this.current_face),
+        this.slides[this.current_slide].images[this.current_image]);
+    location.hash = this.current_slide + "." + this.current_image;
   },
 
   go_to_slide: function(number) {
