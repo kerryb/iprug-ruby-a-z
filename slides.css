@@ -13,6 +13,10 @@ body {
   position: relative;
   margin: 40px auto;
   -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
 }
 
 #cube {
@@ -20,27 +24,115 @@ body {
   height: 100%;
   position: absolute;
   -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
-#cube .front { -webkit-transform: rotateY(0deg) translateZ(300px); }
-#cube .back { -webkit-transform: rotateX(180deg) translateZ(300px); }
-#cube .right { -webkit-transform: rotateY(90deg) translateZ(300px); }
-#cube .left { -webkit-transform: rotateY(-90deg) translateZ(300px); }
-#cube .top { -webkit-transform: rotateX(90deg) translateZ(300px); }
-#cube .bottom { -webkit-transform: rotateX(-90deg) translateZ(300px); }
+#cube .front {
+  -webkit-transform: rotateY(0deg) translateZ(300px);
+  -moz-transform: rotateY(0deg) translateZ(300px);
+  -ms-transform: rotateY(0deg) translateZ(300px);
+  -o-transform: rotateY(0deg) translateZ(300px);
+  transform: rotateY(0deg) translateZ(300px);
+}
+#cube .back {
+  -webkit-transform: rotateX(180deg) translateZ(300px);
+  -moz-transform: rotateX(180deg) translateZ(300px);
+  -ms-transform: rotateX(180deg) translateZ(300px);
+  -o-transform: rotateX(180deg) translateZ(300px);
+  transform: rotateX(180deg) translateZ(300px);
+}
+#cube .right {
+  -webkit-transform: rotateY(90deg) translateZ(300px);
+  -moz-transform: rotateY(90deg) translateZ(300px);
+  -ms-transform: rotateY(90deg) translateZ(300px);
+  -o-transform: rotateY(90deg) translateZ(300px);
+  transform: rotateY(90deg) translateZ(300px);
+}
+#cube .left {
+  -webkit-transform: rotateY(-90deg) translateZ(300px);
+  -moz-transform: rotateY(-90deg) translateZ(300px);
+  -ms-transform: rotateY(-90deg) translateZ(300px);
+  -o-transform: rotateY(-90deg) translateZ(300px);
+}
+#cube .top {
+  -webkit-transform: rotateX(90deg) translateZ(300px);
+  -moz-transform: rotateX(90deg) translateZ(300px);
+  -ms-transform: rotateX(90deg) translateZ(300px);
+  -o-transform: rotateX(90deg) translateZ(300px);
+  transform: rotateX(90deg) translateZ(300px);
+}
+#cube .bottom {
+  -webkit-transform: rotateX(-90deg) translateZ(300px);
+  -moz-transform: rotateX(-90deg) translateZ(300px);
+  -ms-transform: rotateX(-90deg) translateZ(300px);
+  -o-transform: rotateX(-90deg) translateZ(300px);
+  transform: rotateX(-90deg) translateZ(300px);
+}
 
 #cube {
   -webkit-transform: translateZ(-300px);
+  -moz-transform: translateZ(-300px);
+  -ms-transform: translateZ(-300px);
+  -o-transform: translateZ(-300px);
+  transform: translateZ(-300px);
   -webkit-transition: -webkit-transform 1s ease-in-out;
+  -moz-transition: -moz-transform 1s ease-in-out;
+  -ms-transition: -ms-transform 1s ease-in-out;
+  -o-transition: -o-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
-#cube.initial { -webkit-transform: translateZ(-300px) rotateX(-18deg) rotateY(20deg); }
-#cube.show-front { -webkit-transform: translateZ(-300px) rotateY(0deg); }
-#cube.show-back { -webkit-transform: translateZ(-300px) rotateX(-180deg); }
-#cube.show-right { -webkit-transform: translateZ(-300px) rotateY(-90deg); }
-#cube.show-left { -webkit-transform: translateZ(-300px) rotateY(90deg); }
-#cube.show-top { -webkit-transform: translateZ(-300px) rotateX(-90deg); }
-#cube.show-bottom { -webkit-transform: translateZ(-300px) rotateX(90deg); }
+#cube.initial {
+  -webkit-transform: translateZ(-300px) rotateX(-18deg) rotateY(20deg);
+  -moz-transform: translateZ(-300px) rotateX(-18deg) rotateY(20deg);
+  -ms-transform: translateZ(-300px) rotateX(-18deg) rotateY(20deg);
+  -o-transform: translateZ(-300px) rotateX(-18deg) rotateY(20deg);
+  transform: translateZ(-300px) rotateX(-18deg) rotateY(20deg);
+}
+#cube.show-front {
+  -webkit-transform: translateZ(-300px) rotateY(0deg);
+  -moz-transform: translateZ(-300px) rotateY(0deg);
+  -ms-transform: translateZ(-300px) rotateY(0deg);
+  -o-transform: translateZ(-300px) rotateY(0deg);
+  transform: translateZ(-300px) rotateY(0deg);
+}
+#cube.show-back {
+  -webkit-transform: translateZ(-300px) rotateX(-180deg);
+  -moz-transform: translateZ(-300px) rotateX(-180deg);
+  -ms-transform: translateZ(-300px) rotateX(-180deg);
+  -o-transform: translateZ(-300px) rotateX(-180deg);
+  transform: translateZ(-300px) rotateX(-180deg);
+}
+#cube.show-right {
+  -webkit-transform: translateZ(-300px) rotateY(-90deg);
+  -moz-transform: translateZ(-300px) rotateY(-90deg);
+  -ms-transform: translateZ(-300px) rotateY(-90deg);
+  -o-transform: translateZ(-300px) rotateY(-90deg);
+  transform: translateZ(-300px) rotateY(-90deg);
+}
+#cube.show-left {
+  -webkit-transform: translateZ(-300px) rotateY(90deg);
+  -moz-transform: translateZ(-300px) rotateY(90deg);
+  -ms-transform: translateZ(-300px) rotateY(90deg);
+  -o-transform: translateZ(-300px) rotateY(90deg);
+}
+#cube.show-top {
+  -webkit-transform: translateZ(-300px) rotateX(-90deg);
+  -moz-transform: translateZ(-300px) rotateX(-90deg);
+  -ms-transform: translateZ(-300px) rotateX(-90deg);
+  -o-transform: translateZ(-300px) rotateX(-90deg);
+  transform: translateZ(-300px) rotateX(-90deg);
+}
+#cube.show-bottom {
+  -webkit-transform: translateZ(-300px) rotateX(90deg);
+  -moz-transform: translateZ(-300px) rotateX(90deg);
+  -ms-transform: translateZ(-300px) rotateX(90deg);
+  -o-transform: translateZ(-300px) rotateX(90deg);
+  transform: translateZ(-300px) rotateX(90deg);
+}
 
 #main {
   position: absolute;
@@ -49,6 +141,9 @@ body {
   left: 0;
   right: 0;
   -webkit-transition: right 0.5s ease-in-out;
+  -moz-transition: right 0.5s ease-in-out;
+  -ms-transition: right 0.5s ease-in-out;
+  -o-transition: right 0.5s ease-in-out;
 }
 
 #notes {
@@ -58,6 +153,10 @@ body {
   left: 100%;
   right: 0;
   -webkit-transition: left 0.5s ease-in-out;
+  -moz-transition: left 0.5s ease-in-out;
+  -ms-transition: left 0.5s ease-in-out;
+  -o-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
   color: #ccc;
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
