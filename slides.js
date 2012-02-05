@@ -61,6 +61,7 @@ var Presentation = {
 
   init: function() {
     this.preload_images();
+    $("#notes-0").show();
     $("#toggle-notes").click(Presentation.toggle_notes);
     $(document).keydown(function(e) {
       Presentation.handleKeyDown(e.which);
@@ -138,12 +139,17 @@ var Presentation = {
   },
 
   change_image: function() {
-    this.display_image(this.face_element_named(this.current_face),
-        this.slides[this.current_slide].images[this.current_image]);
-    location.hash = this.current_slide + "." + this.current_image;
+    var images = this.slides[this.current_slide].images;
+    if (images) {
+      this.display_image(this.face_element_named(this.current_face),
+          images[this.current_image]);
+      location.hash = this.current_slide + "." + this.current_image;
+    }
   },
 
   go_to_slide: function(number) {
+    $("#notes div").hide();
+    $("#notes-" + number).show();
     if (number >= 0 && number < this.slides.length) {
       var face = this.cube.face_with_slide(number);
       var face_name;
