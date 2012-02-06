@@ -152,16 +152,17 @@ body {
   bottom: 0;
   left: 100%;
   right: 0;
+  color: #ccc;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  padding: 30px 20px;
+  border-left: 1px solid #444;
   -webkit-transition: left 0.5s ease-in-out;
   -moz-transition: left 0.5s ease-in-out;
   -ms-transition: left 0.5s ease-in-out;
   -o-transition: left 0.5s ease-in-out;
   transition: left 0.5s ease-in-out;
-  color: #ccc;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
-  font-size: 25px;
-  padding: 30px 10px;
 }
 
 #notes div {
@@ -175,9 +176,26 @@ body {
 }
 
 #toggle-notes {
-  position: fixed;
+  position: absolute;
   top: 10px;
-  right: 10px;
+  right: 0px;
+  background-image: url('images/tab.png');
+  width: 32px;
+  height: 70px;
+  padding-top: 30px;
+  cursor: pointer;
+}
+
+#toggle-notes p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-shadow: white 1px 1px 0;
+  -webkit-transform: rotateZ(-90deg);
+  -moz-transform: rotateZ(-90deg);
+  -ms-transform: rotateZ(-90deg);
+  -o-transform: rotateZ(-90deg);
+  transform: rotateZ(-90deg);
 }
 
 #slides { display: none; }
