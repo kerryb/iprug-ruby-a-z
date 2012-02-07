@@ -39,15 +39,15 @@
       <div id="notes-2">
         <p>B is for
           <a href="http://ruby-doc.org/docs/ProgrammingRuby/html/tut_containers.html#S2">blocks</a>,
-          which are one of Ruby&rsquo;s most powerful features.  Amongst other
-          things, they let you write much simpler loops that aren&rsquo;t prone to
+          which are one of Ruby&rsquo;s most powerful features. Amongst other
+          things, they let you iterate over collections without risking
           off-by-one errors, and work with files without having to remember to
           explicitly close them afterwards.</p>
       </div>
       <div id="notes-3">
-        <p>C is for community and culture. The ruby community is generally
-          pretty friendly and helpful, and is as much a part of the attraction
-          as the langauge itself.</p>
+        <p>C is for community and culture. I&rsquo;ve always found the Ruby
+          community to be pretty friendly and helpful, and it&rsquo;s as much a
+          part of the attraction as the langauge itself.</p>
         <p>Of course, there&rsquo;s also the occasional bit of conflict and
           <a href="https://github.com/rails/rails/compare/9333ca7...23aa7da">controversy</a>
           to add some excitement!</p>
@@ -66,9 +66,9 @@
       <div id="notes-5">
         <p>E is for <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html">Enumerable</a>,
           the module that gives you nearly 50 collection methods for the price
-          of one &ndash; you just need to define <tt>each</tt>.</p>
-        <p>Some of Enumerable&rsquo;s methods, like <tt>map</tt>, <tt>reduce</tt>,
-          <tt>select</tt> and <tt>inject</tt>, are also critical to our next
+          of one &ndash; you just need to define <tt>each</tt> and it does the rest.</p>
+        <p>Some of Enumerable&rsquo;s methods, like <tt>map</tt>,
+          <tt>reduce</tt> and <tt>select</tt> are also critical to our next
           entry &hellip;</p>
       </div>
       <div id="notes-6">
@@ -106,21 +106,21 @@
           using Ruby this was a breath of fresh air, although it turns out that
           most modern languages have a similar
           <a href="http://en.wikipedia.org/wiki/REPL">REPL</a>. I say
-          &lsquo;most&rsquo; &hellip;</p>
+          &lsquo;most&rsquo; advisedly, because &hellip;</p>
       </div>
       <div id="notes-10">
         <p>J is for <a href="http://www.java.com/en/">Java</a>, the language
           rubyists love to hate. It actually turns out to be a rather clunky
-          language running on a very solid platform, so we should be grateful
-          for <a href="http://jruby.org/">JRuby</a>, which lets you take
-          advantage of one without having to put up with the other.</p>
+          language running on a very solid platform. Fortunately we have
+          <a href="http://jruby.org/">JRuby</a>, which lets us take advantage
+          of one without having to put up with the other.</p>
       </div>
       <div id="notes-11">
         <p>K is for kitten. Nothing to do with Ruby, but every presentation
           should have one.</p>
       </div>
       <div id="notes-12">
-        <p>L is for licence. Ruby is licenced under the permissive <a
+        <p>L is for licence. Ruby is released under the permissive <a
             href="http://www.opensource.org/licenses/mit-license.php">MIT licence</a>,
           and most libraries and tools seem to follow suit, or use some other
           BSD-like licence.</p>
@@ -148,7 +148,7 @@
         <p>O is for open source, which seems to be very much part of the Ruby philosophy.</p>
         <p>It's also for
           <a href="http://en.wikipedia.org/wiki/Ruby_(programming_language)#Open_classes">open classes</a>,
-          but, like with metaprogramming, just because you <em>can</em> add
+          but, as with metaprogramming, just because you <em>can</em> add
           methods to an existing class, it doesn't necessarily mean you
           <em>should</em>.</p>
       </div>
@@ -176,9 +176,10 @@
           <a href="http://beginrescueend.com/">RVM</a>,
           <a href="http://rubyonrails.org/">Rails</a> and
           <a href="http://rspec.info/">RSpec</a> That&rsquo;s a fairly random
-          collection of libraries and frameworks, but they&rsquo;re really here
-          as a reminder of how many great tools we have at our disposal.</p>
-        <p>No-one can remember them all though, and
+          collection of libraries and frameworks which just happen to start
+          with R, but they&rsquo;re really here as a reminder of how many great
+          tools we have at our disposal.</p>
+        <p>Of course, no-one can remember them all, so
           <a href="http://www.ruby-toolbox.com/">The Ruby Toolbox</a> is a good
           place to find the right tool for the job.</p>
       </div>
@@ -189,15 +190,15 @@
           modules.</p>
       </div>
       <div id="notes-20">
-        <p>T is for testing in general, and TDD in particular. Without even a
-          compiler to catch our mistakes, automated tests become even more
+        <p>T is for testing in general, and TDD in particular. Without a
+          compiler to catch silly mistakes, automated tests become even more
           important (although, of course, TDD is about design rather than
           testing).</p>
         <p>An admission though: I didn't test-drive the Javascript behind this
           presentation, and it probably shows!</p>
       </div>
       <div id="notes-21">
-        <p>U is for &rdquo;Use the force, Luke!&rdquo; &ndash; something that&rsquo;s
+        <p>U is for &rdquo;Use the source, Luke!&rdquo; &ndash; something that&rsquo;s
           much easier to do in an interpreted language like Ruby, which can
           come in handy for some libraries with less-than-comprehensive
           documentation.</p>
@@ -210,7 +211,7 @@
       <div id="notes-23">
         <p>W is for
           <a href="http://en.wikipedia.org/wiki/Why_the_lucky_stiff">Why the Lucky Stiff</a>,
-          prolific author of Ruby libraries and of course the unique
+          prolific author of Ruby libraries and of course of the unique
           <a href="http://mislav.uniqpath.com/poignant-guide/">Poignant Guide</a>.
           He may have moved on, but you can still see his influence in the
           lighter side of the Ruby community.</p>
@@ -218,8 +219,8 @@
       <div id="notes-24">
         <p>X is for <a href="http://en.wikipedia.org/wiki/XML">XML</a>.
           Fortunately there&rsquo;s nowhere near as much of it about as there
-          is with &hellip; some other languages, but when we do need to deal
-          with it we have great libraries like
+          is with some other languages, but when we do need to deal with it we
+          have great libraries like
           <a href="http://builder.rubyforge.org/">Builder</a> and
           <a href="http://nokogiri.org/">Nokogiri</a> to help.</p>
       </div>
