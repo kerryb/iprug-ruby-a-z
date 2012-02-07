@@ -227,11 +227,13 @@ body {
   margin: 100px 30px 40px 30px;
   font-size: 85px;
   text-align: center;
+  color: #ff0000;
 }
 
 .face h2 {
   font-size: 40px;
   text-align: center;
+  color: #0000ff;
 }
 
 .face h1.letter {
