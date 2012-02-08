@@ -202,6 +202,7 @@ body {
   height: 70px;
   padding-top: 30px;
   cursor: pointer;
+  z-index: 101;
 }
 
 #toggle-notes p {
