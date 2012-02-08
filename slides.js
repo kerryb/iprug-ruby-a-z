@@ -74,6 +74,8 @@ var Presentation = {
     this.preload_images();
     $("#notes-0").show();
     $("#toggle-notes").click(Presentation.toggle_notes);
+    $("#back").click(Presentation.previous);
+    $("#forward").click(Presentation.next);
     $("#notes a").attr("target", "ruby_a_to_z_links");
     $(document).keydown(Presentation.handle_key_down).keypress(Presentation.handle_key_press);
     this.cube.populate();
@@ -146,23 +148,23 @@ var Presentation = {
     }
 
     if (has_another_image()) {
-      this.current_image += 1;
-      var face = this.face_element_named(this.current_face);
-      face.css("background-position", "-" + (this.current_image * 600) + "px 0");
+      Presentation.current_image += 1;
+      var face = Presentation.face_element_named(Presentation.current_face);
+      face.css("background-position", "-" + (Presentation.current_image * 600) + "px 0");
     } else {
-      this.current_image = 0;
-      this.go_to_slide(this.current_slide + 1);
+      Presentation.current_image = 0;
+      Presentation.go_to_slide(Presentation.current_slide + 1);
     }
   },
 
   previous: function() {
     if (Presentation.current_image > 0) {
-      this.current_image -= 1;
-      this.change_image();
+      Presentation.current_image -= 1;
+      Presentation.change_image();
     } else {
-      this.current_image = 0;
-      this.go_to_slide(this.current_slide - 1);
-      this.change_image();
+      Presentation.current_image = 0;
+      Presentation.go_to_slide(Presentation.current_slide - 1);
+      Presentation.change_image();
     }
   },
 
