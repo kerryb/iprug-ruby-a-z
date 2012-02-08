@@ -123,6 +123,7 @@ var Presentation = {
       Presentation.go_to_slide(key - 96);
     } else if (key === 48) {
       event.preventDefault();
+      Presentation.cube.face_named("front").slide = 0;
       Presentation.go_to_slide(0);
       $("#cube").removeClass().addClass("initial");
     }
